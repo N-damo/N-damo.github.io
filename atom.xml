@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Leon&#39;s Blog</title>
+  
+  <subtitle>生命可以归结为一种简单的选择，要么忙于生存，要么赶着去死</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-03-05T03:35:43.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Li&#39;an Lin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FirstBlog</title>
+    <link href="http://yoursite.com/2019/03/05/FirstBlog/"/>
+    <id>http://yoursite.com/2019/03/05/FirstBlog/</id>
+    <published>2019-03-05T03:35:43.000Z</published>
+    <updated>2019-03-05T03:35:43.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
