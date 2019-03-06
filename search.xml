@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2019%2F03%2F06%2Ftest%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[hexo.md]]></title>
     <url>%2F2019%2F03%2F06%2Fhexo%2F</url>
     <content type="text"><![CDATA[HEXOstep1hexo init mybloghexo new ‘firstblog’hexo ghexo d step2部署：修改站点配置文件：deploy: type: git repository: github@github.com:N-damo.github.io.git branch: master运行：npm install hexo-deployer-git –save运行：hexo g（本地生成静态文件）运行：hexo d（将本地静态文件推送至Github）打开浏览器，访问https://n-damo.github.io]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[FirstBlog]]></title>
-    <url>%2F2019%2F03%2F05%2FFirstBlog%2F</url>
-    <content type="text"></content>
   </entry>
 </search>

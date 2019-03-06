@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-06T01:02:45.000Z</updated>
+  <updated>2019-03-06T05:26:27.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2019/03/06/test/"/>
+    <id>http://yoursite.com/2019/03/06/test/</id>
+    <published>2019-03-06T05:26:27.000Z</published>
+    <updated>2019-03-06T05:26:27.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo.md</title>
@@ -31,20 +45,6 @@
       
         &lt;h1 id=&quot;HEXO&quot;&gt;&lt;a href=&quot;#HEXO&quot; class=&quot;headerlink&quot; title=&quot;HEXO&quot;&gt;&lt;/a&gt;HEXO&lt;/h1&gt;&lt;h2 id=&quot;step1&quot;&gt;&lt;a href=&quot;#step1&quot; class=&quot;headerlink&quot; title=&quot;step1&quot;&gt;
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>FirstBlog</title>
-    <link href="http://yoursite.com/2019/03/05/FirstBlog/"/>
-    <id>http://yoursite.com/2019/03/05/FirstBlog/</id>
-    <published>2019-03-05T03:35:43.000Z</published>
-    <updated>2019-03-05T03:35:43.000Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
