@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="Leon&#39;s Blog">
 <meta property="og:description" content="YpredictYpredict is a python based software package that predicts y chromosome haplogroup. Here, I use calculate rank method to automatically find the most likely y haplogroup. For each y haplogroup,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T08:01:40.000Z">
+<meta property="og:updated_time" content="2019-03-07T07:15:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Y-Haplo">
 <meta name="twitter:description" content="YpredictYpredict is a python based software package that predicts y chromosome haplogroup. Here, I use calculate rank method to automatically find the most likely y haplogroup. For each y haplogroup,">
@@ -319,7 +319,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  324
+                  354
                 </span>
               
 
@@ -356,7 +356,7 @@
       
 
       
-        <h1 id="Ypredict"><a href="#Ypredict" class="headerlink" title="Ypredict"></a>Ypredict</h1><p><strong>Ypredict</strong> is a python based software package that predicts y chromosome haplogroup. Here, I use calculate rank method to automatically find the most likely y haplogroup. For each y haplogroup, I give two mark (T or F) according their snp calling state. For Example, if the haplogroup O2a1a1a2a1 in isogg (<a href="https://isogg.org/tree/" target="_blank" rel="noopener">https://isogg.org/tree/</a>) haplogroup tree has six snps, then I calculate the number of true happening snp in the tested sample. For each haplogroup, I add all of the  rank along the routine from the ‘Y’ haplogroup to this haplogroup(rank = n_T + ((n_T**2)/(n_T + n_F))). After that, the max rank and ‘T’ mark of the haplogroup will be the most likely haplogroup. </p>
+        <h1 id="Ypredict"><a href="#Ypredict" class="headerlink" title="Ypredict"></a>Ypredict</h1><p><strong>Ypredict</strong> is a python based software package that predicts y chromosome haplogroup. Here, I use calculate rank method to automatically find the most likely y haplogroup. For each y haplogroup, I give two mark (T or F) according their snp calling state. For Example, if the haplogroup O2a1a1a2a1 in isogg (<a href="https://isogg.org/tree/" target="_blank" rel="noopener">https://isogg.org/tree/</a>) haplogroup tree has six snps, five snps was observed. If the ratio is 5/6 &gt;= 0.2, I give the T mark. Else, F mark. For each haplogroup, I calculate the number of T mark as n_T, nonexist as n_F, along the routine from the ‘Y’ haplogroup to this haplogroup(rank = (n_T**2)/(n_T + n_F)). If the rank same, the max number of n_T of the haplogroup will be the most likely haplogroup. If rank and n_T are both the same, then ramdomly select the one of mathced haplogroup.</p>
 <ul>
 <li>The current version is 0.0.1  </li>
 </ul>
@@ -631,7 +631,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共404字</span>
+  <span class="post-count">博客全站共434字</span>
 </div>
 
         
