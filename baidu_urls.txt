@@ -1,2 +1,3 @@
+http://n-damo.github.io/2019/03/07/consensus-sequence/
 http://n-damo.github.io/2019/03/06/Y-Haplo/
 http://n-damo.github.io/2019/03/06/hexo/

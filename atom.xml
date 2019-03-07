@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://n-damo.github.io/"/>
-  <updated>2019-03-07T07:15:06.000Z</updated>
+  <updated>2019-03-07T08:58:03.000Z</updated>
   <id>http://n-damo.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>consensus sequence</title>
+    <link href="http://n-damo.github.io/2019/03/07/consensus-sequence/"/>
+    <id>http://n-damo.github.io/2019/03/07/consensus-sequence/</id>
+    <published>2019-03-07T08:56:17.000Z</published>
+    <updated>2019-03-07T08:58:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="怎么获得共有序列（consensus-sequence）"><a href="#怎么获得共有序列（consensus-sequence）" class="headerlink" title="怎么获得共有序列（consensus sequence）"></a>怎么获得共有序列（consensus sequence）</h1><p>在网上大家会反复提到的一个问题是“我怎么从我的bam文件中获得共有序列（consensus)”，这个问题的翻版是“我怎么从我的bam文件中提取fasta序列”。当然，这个问题背后实际想表达的通常是获得样品中感兴趣区间的序列，然后进行多样本或多物种的序列比对。那些做过系统发育分析的人应该对这个问题很感兴趣？</p><h2 id="上面这些问题可以通过简单的两步来解决："><a href="#上面这些问题可以通过简单的两步来解决：" class="headerlink" title="上面这些问题可以通过简单的两步来解决："></a>上面这些问题可以通过简单的两步来解决：</h2><ol><li>进行变异检测，获得VCF文件</li><li>VCF文件与参考基因组进行比较，替换变异的位点</li></ol><p>变异检测的软件和方法多如牛毛，后面的公众号也会分享一些目前流行的工具和流程。这里假设你用bcftools 的mpileup进行变异的检测。</p><p>$ bcftools mpileup -Ou -f ref.fa input.bam | bcftools call -Oz -mv -o output.vcf.gz<br>获得的VCF文件需要排序过的，并且是经过bgzip压缩和tabix 构建索引的步骤。排序可以下载vcftools，使用vcf-sort your.vcf.gz|bgzip &gt;sort.vcf.gz命令。</p><p>压缩参考命令如下：</p><p>$ bgzip -c output.vcf &gt; output.vcf.gz<br>tabix 命令如下：</p><p>$ tabix output.vcf.gz<br>现在可以开始进行consensus序列的获取了，这里使用bcftools工具中的consensus命令。如果你想创建一个新的基于你的变异文件的参考基因组，参考下面这条命令：</p><p>$ bcftools consensus -f ref.fa output.vcf.gz &gt; out.fa<br>假如你只是对某个区间感兴趣的话，参考下面这条命令:</p><p>$ samtools faidx ref.fa 8:11870-11890 | bcftools consensus output.vcf.gz -o out.fa<br>当然多个区间也是可以的:</p><p>$ samtools faidx -r regions.bed ref.fa  | bcftools consensus output.vcf.gz -o out.fa<br>还有不懂的可以后台回复。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;怎么获得共有序列（consensus-sequence）&quot;&gt;&lt;a href=&quot;#怎么获得共有序列（consensus-sequence）&quot; class=&quot;headerlink&quot; title=&quot;怎么获得共有序列（consensus sequence）&quot;&gt;&lt;/a&gt;怎么
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Y-Haplo</title>
@@ -44,7 +65,7 @@
     <published>2019-03-06T00:48:17.000Z</published>
     <updated>2019-03-06T07:15:10.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1"></a>step1</h2><p>hexo init myblog<br>hexo new ‘firstblog’<br>hexo g<br>hexo d  </p><h2 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h2><p>部署：<br>修改站点配置文件：<br>deploy:<br>  type: git<br>  repository: <a href="mailto:github@github.com" target="_blank" rel="noopener">github@github.com</a>:N-damo.github.io.git<br>  branch: master<br>运行：npm install hexo-deployer-git –save<br>运行：hexo g（本地生成静态文件）<br>运行：hexo d（将本地静态文件推送至Github）<br>打开浏览器，访问<a href="https://n-damo.github.io" target="_blank" rel="noopener">https://n-damo.github.io</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1"></a>step1</h2><p>hexo init myblog<br>hexo new ‘firstblog’<br>hexo g<br>hexo d  </p><h2 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h2><p>部署：<br>修改站点配置文件：<br>deploy:<br>  type: git<br>  repository: <a href="mailto:github@github.com" target="_blank" rel="noopener">github@github.com</a>:N-damo.github.io.git<br>  branch: master<br>运行：npm install hexo-deployer-git –save<br>运行：hexo g（本地生成静态文件）<br>运行：hexo d（将本地静态文件推送至Github）<br>打开浏览器，访问<a href="https://n-damo.github.io">https://n-damo.github.io</a></p>]]></content>
     
     <summary type="html">
     
